@@ -1,7 +1,8 @@
 require 'sinatra'
+require 'sinatra/base'
 
 set :bind, '0.0.0.0'
 
 get '/' do
-  redirect "index.html"
+  send_file "public/index.html"
 end
